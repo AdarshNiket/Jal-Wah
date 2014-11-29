@@ -162,9 +162,21 @@
 .impact_tab{
 	padding:0;
 	top: -20px;
+	height: 94px;
 	}
 .height_fit{
-	height: 100vh;
+	height: 418px;
+	width: 100%;
+	float: left;
+	overflow: hidden !important;
+	position: relative;
+	top: -24px;
+	left: 0px;
+	}
+.day_01{
+	background-image:url(img/daily%20impact.svg);
+	background-position:left top;
+	background-repeat:no-repeat;
 	}
 .impact_tab .ui-btn.ui-btn-active{
 	background-color:#f3f4f6 !important;
