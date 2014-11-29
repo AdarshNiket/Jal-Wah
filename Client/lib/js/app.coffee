@@ -6,17 +6,24 @@ $(document).ready(->
   if emailId
     $.ajax
         type: "GET"
-        url: "/checkUser/"+emailId
+        url: serverHost + "/checkUser/"+emailId
         dataType: "json"
-    .done (resp)->
-        $(".usagewarning").popup "open"  if resp.popupflag is true
+    .done (respData)->
+        if respData.status is 'SUCCESS'
+          window.location.hash = "#home"
+          $(".usagewarning").popup "open"  if respData.popupflag is true
+        else
+          $('#login').show()
         return
+  else
+    $('#login').show()
 
   # $("#registrationForm .submit").on("click", ->
   #   $("#registrationForm").trigger("submit")
   # )
   
-  $("#registrationForm").on "submit", ->
+  $("#registrationForm").on "submit", ($event)->
+    $event.preventDefault()
     usrname = $(".usrname").val()
     email = $(".email").val()
     mobileno = $(".mobileno").val()
@@ -38,14 +45,14 @@ $(document).ready(->
       crossDomain: true
       data: postData
       dataType: "json"
-    .done (returnData)->
-        if returnData.status is 'SUCCESS'
-          localStorage.setItem(EMAIL_KEY, 'hai@gmail.com')
+    .done (respData)->
+        if respData.status is 'SUCCESS'
+          localStorage.setItem(EMAIL_KEY, email)
           window.location.hash = "#home"
         return
     .fail ->
       return
-  return false
+    return false
 ) 
 
 
@@ -62,14 +69,12 @@ $(document).ready(->
     , 5000)
 
   $(".leaveit").on "click", ->
-    debugger
-<<<<<<< HEAD
-    $(".usagewarning").popup "close"
-  return
-)
-=======
     $('.usagewarning').popup('close')
     setTimeout(->
       $('.icon-Pledge').show()
     ,1000)
->>>>>>> f7f70c07120751d434b34293dec48db7f90163dd
+  return
+)
+
+    
+
