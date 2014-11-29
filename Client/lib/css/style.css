@@ -53,6 +53,7 @@
 	}
 .no_person{
 	margin-top: 22px !important;
+	border:none !important;
 	}
 .no_person .ui-input-text{	
 	background-color:transparent !important;
