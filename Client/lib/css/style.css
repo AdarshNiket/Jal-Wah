@@ -69,3 +69,15 @@
 .login_sub{
 	text-decoration:none !important
 	}
+.icon-Pledge {
+	background-image: url(img/Pledge-02.svg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: 64%;
+	width: 44px;
+	display: inline-block;
+	height: 50px;
+	position: absolute;
+	right: 3%;
+	top: 13%;
+}
