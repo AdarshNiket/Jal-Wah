@@ -9,7 +9,7 @@
 .bj_blue{
 	background:#01c7f4 !important;
 	border:none !important;
-	height:60px;
+	height:40px;
 	}
 .button_blue{
 	background-color:#01c7f4 !important;
@@ -20,7 +20,7 @@
 	}
 .bj_blue .ui-title{
 	font-size:24px !important;
-	padding-top:11px !important;
+	padding-top:3px !important;
 	box-shadow:none !important;
 	border:none !important;
 	text-shadow:none !important;
@@ -83,39 +83,39 @@
 	background-image: url(img/menu.svg);
 	background-repeat: no-repeat;
 	background-position: left top;
-	background-size: 133%;
+	background-size: 123%;
 	width: 44px;
 	display: inline-block;
 	height: 50px;
 	position: absolute;
-	left: -5%;
-	top: 0%;
+	left: -25px;
+	top: -7px;
 	cursor: pointer;
 }
 .icon-logo {
 	background-image: url(img/logo.svg);
 	background-repeat: no-repeat;
 	background-position: left top;
-	background-size: 100%;
+	background-size: 86%;
 	width: 44px;
 	display: inline-block;
 	height: 50px;
 	position: absolute;
-	left: 2%;
-	top: 10%;
+	left: 10px;
+	top: 0px;
 	cursor: pointer;
 }
 .icon-notification {
 	background-image: url(img/notification.svg);
 	background-repeat: no-repeat;
 	background-position: left top;
-	background-size: 85%;
+	background-size: 73%;
 	width: 44px;
 	display: inline-block;
 	height: 50px;
 	position: absolute;
 	right: 0;
-	top: 15%;
+	top: 2px;
 	cursor: pointer;
 }
 .icon-menu a{
@@ -128,25 +128,29 @@
 	float: left;
 	color: #FFF;
 	text-shadow: none;
-	line-height: 60px;
-	margin-left: 13%;
+	line-height: 40px;
+	margin-left: 47px;
 	font-size:19px;
 	}
 .red_tip{
-	width: 15px;
-	height: 15px;
-	background: red;
-	-moz-border-radius: 70px;
-	-webkit-border-radius: 70px;
+	width: 31px;
+	height: 24px;
+	background-image: url(img/red.svg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: 100%;
 	border-radius: 7px;
 	display: inline-block;
 	position: absolute;
-	right: 2%;
-	top: 22%;
+	right: 6px;
+	top: -4px;
+	font-weight: normal;
+	line-height: 31px;
 	cursor: pointer;
-	box-shadow:none;
-	font-size:11px;
-	color:#FFF;
-	text-shadow:none;
-	text-align:center;
+	box-shadow: none;
+	font-size: 65%;
+	color: #FFF;
+	text-shadow: none;
+	text-align: center;
+
 	}
