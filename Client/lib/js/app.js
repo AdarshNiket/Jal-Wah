@@ -51,8 +51,7 @@ $(document).ready(function() {
     debugger;
     $('.usagewarning').popup('close');
     return setTimeout(function() {
-
-      /*$('.restorewater').popup('open') */
+      return $('.icon-Pledge').show();
     }, 1000);
   });
 });

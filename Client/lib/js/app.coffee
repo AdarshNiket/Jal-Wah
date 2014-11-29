@@ -49,5 +49,5 @@ $(document).ready ->
     debugger
     $('.usagewarning').popup('close')
     setTimeout(->
-      ###$('.restorewater').popup('open')###
+      $('.icon-Pledge').show()
     ,1000)
