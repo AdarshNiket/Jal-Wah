@@ -80,4 +80,23 @@
 	position: absolute;
 	right: 3%;
 	top: 13%;
+	cursor:pointer;
 }
+.icon-menu {
+	background-image: url(img/menu.svg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: 133%;
+	width: 44px;
+	display: inline-block;
+	height: 50px;
+	position: absolute;
+	left: -5%;
+	top: 0%;
+	cursor: pointer;
+}
+.icon-menu a{
+	display:inline-block;
+	width: 44px;
+	height: 50px;
+	}
