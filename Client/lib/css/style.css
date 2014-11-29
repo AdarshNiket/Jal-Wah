@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+.bj_blue{
+	background:#51a7f9 !important;
+	border:none !important;
+	height:60px;
+	}
+.bj_blue .ui-title{
+	font-size:24px !important;
+	padding-top:11px !important;
+	box-shadow:none !important;
+	border:none !important;
+	text-shadow:none !important;
+	color:#FFF !important;
+	}
