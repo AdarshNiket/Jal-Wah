@@ -14,40 +14,50 @@
  </head> 
  <body> 
   <!-- Login page --> 
-  <!-- <div data-role="page" id="login">
-	<!-- header -->
-  <div data-role="header" class="bj_blue">
-   <h1>JAL-WAH!</h1>
+  <div data-role="page" id="login"> 
+   <!-- header -->
+   <div data-role="header" class="bj_blue">
+    <h1>JAL-WAH!</h1>
+   </div>
+   <!-- /header --> 
+   <!-- content --> 
+   <div role="main" class="ui-content"> 
+    <p align="center"> Welcome to <br /> <strong>H007 OZONE EVERGREENS.</strong><br /> Let’s set up your profile. </p> 
+    <p align="center"> <img src="lib/css/img/user.png" /> </p> 
+    <form class="form_name"> 
+     <input type="text" placeholder="Enter Name" value="" class="text_align" /> 
+     <input type="text" placeholder="Enter Mobile Number" value="" class="text_align" /> 
+     <input type="text" placeholder="Enter email" value="" class="text_align" /> 
+     <div class="ui-field-contain no_person">
+       &nbsp;&nbsp;&nbsp;&nbsp;
+      <label for="number-1 ">Number of people in home:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="" /> 
+     </div> 
+    </form> 
+    <a href="#home"><button class="ui-btn button_blue">Now let’s <strong>save some water!</strong></button><p></p> </a>
+   </div>
+   <!-- /content -->
+   <a href="#home"> </a>
   </div>
-  <!-- /header --> 
-  <!-- content --> 
-  <div role="main" class="ui-content"> 
-   <p align="center"> Welcome to <br /> <strong>H007 OZONE EVERGREENS.</strong><br /> Let’s set up your profile. </p> 
-   <p align="center"> <img src="lib/css/img/user.png" /> </p> 
-   <form class="form_name"> 
-    <input type="text" placeholder="Enter Name" value="" class="text_align" /> 
-    <input type="text" placeholder="Enter Mobile Number" value="" class="text_align" /> 
-    <input type="text" placeholder="Enter email" value="" class="text_align" /> 
-   </form> 
-  </div>
-  <!-- /content -->  --&gt; 
-  <!-- /Login page --> 
-  <!-- Home page --> 
-  <div data-role="page" id="home"> 
-   <div data-role="header" class="bj_blue"> 
-    <h1>JAL-WAH!</h1> 
-   </div> 
-   <div data-role="main" class="ui-content"> 
-    <a href="#usagewarning" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Show Popup</a> 
-    <div data-role="popup" id="usagewarning" class="consumtionoption"> 
-     <p>You have consume maximum threshold water level alloted.Please select option (1) to get normal water supply or option (2) to continue with same.</p> 
-     <button class="pledge">1. I pledge not to consume so much water</button> 
-     <button class="leaveit">2. I don't give a damn about it.</button> 
+  <a href="#home"> 
+   <!-- /Login page --> 
+   <!-- Home page --> </a>
+  <div data-role="page" id="home">
+   <a> 
+    <div data-role="header" class="bj_blue"> 
+     <h1>JAL-WAH!</h1> 
     </div> 
-    <div data-role="popup" class="restorewater"> 
-     <p>Congratulations your water supply is restored to normal. Thank you for co-operation.</p> 
-    </div> 
-   </div> 
+    <div data-role="main" class="ui-content"> 
+     <a href="#usagewarning" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Show Popup</a> 
+     <div data-role="popup" id="usagewarning" class="consumtionoption"> 
+      <p>You have consume maximum threshold water level alloted.Please select option (1) to get normal water supply or option (2) to continue with same.</p> 
+      <button class="pledge">1. I pledge not to consume so much water</button> 
+      <button class="leaveit">2. I don't give a damn about it.</button> 
+     </div> 
+     <div data-role="popup" class="restorewater"> 
+      <p>Congratulations your water supply is restored to normal. Thank you for co-operation.</p> 
+     </div> 
+    </div></a> 
   </div> 
   <!-- /Home page -->   
  </body>
