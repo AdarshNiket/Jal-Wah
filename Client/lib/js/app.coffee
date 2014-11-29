@@ -21,15 +21,19 @@ $(document).ready ->
         return
   )
 
-
-  $.ajax
-    type:"GET"
-    url:"data/popup.json"
-    dataType:"json"
-    success:(resp)->
-      if resp.popupflag is true
-        $('.usagewarning').popup('open')
-      return
+  $('.submit').on("click", ->
+    window.location.hash = "#home"
+    setTimeout(->
+      $.ajax
+        type:"GET"
+        url:"data/popup.json"
+        dataType:"json"
+        success:(resp)->
+          if resp.popupflag is true
+            $('.usagewarning').popup('open')
+          return
+    ,1000)    
+  )
 
 
   $('.pledge').on "click", ->
@@ -37,6 +41,9 @@ $(document).ready ->
     setTimeout(->
       $('.restorewater').popup('open')
     ,1000)
+    setTimeout(->
+      $('.restorewater').popup('close')
+    ,5000)
 
   $('.leaveit').on "click", ->
     debugger
