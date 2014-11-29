@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<script src="lib/js/dev/jquery.js"></script>
 	<script src="lib/js/dev/jquery.mobile-1.4.5.min.js"></script>
-	<script src="lib/js/dev/jquery.mobile-1.4.5.min.map"></script>
+	
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	<script src="lib/js/app.js"></script>
 </head>
@@ -36,7 +36,8 @@
                     <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">             
 			</div>            
         </form>
-        <p><button class="ui-btn button_blue">Now let’s <strong>save some water!</strong></button></p>
+        <a href="#home" class="login_sub"><button class="ui-btn button_blue">Now let’s <strong>save some water!</strong></button></a>
+        </p>
     </div><!-- /content -->
 </div>
 <!-- /Login page -->
@@ -48,13 +49,15 @@
 	</div>
 	<div data-role="main" class="ui-content">
 		<a href="#usagewarning" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Show Popup</a>
-		<div data-role="popup" id="usagewarning">
+		<div data-role="popup" id="usagewarning" class="consumtionoption">
   			<p>You have consume maximum threshold water level alloted.Please select option (1) to get normal water supply or option (2) to continue with same.</p>
   			<button class="pledge">1. I pledge not to consume so much water</button>
-  			<button class="pledge">2. I don't give a damn about it.</button>
+  			<button class="leaveit">2. I don't give a damn about it.</button>
+		</div>
+		<div data-role="popup" class="restorewater">
+  			<p>Congratulations your water supply is restored to normal. Thank you for co-operation.</p>
 		</div>
 	</div>
-	<div data-role="footer"></div>
 </div>
 <!-- /Home page -->
 

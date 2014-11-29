@@ -1,8 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
-@media only screen and (min-device-width: 480px){
-	
-	
+@media only screen and (min-device-width: 447px){
+	.login_sub{
+	position: relative;
+	top: 22px;
+	}
 	}
 .bj_blue{
 	background:#01c7f4 !important;
@@ -26,7 +28,7 @@
 	}
 .text_align{
 	text-align:center !important;
-	background-color:#dcdee0 !important;
+	background-color:#FFF !important;
 	border-color:#a6aaa9 !important;
 	border-radius:0px !important;
 	text-shadow:none !important;
@@ -38,8 +40,8 @@
 	border-radius:0px !important;
 	}
 .form_name .ui-input-text{
-	background-color:#dcdee0 !important;
-	border:none !important;
+	background-color:#FFF !important;
+	border:thin #c6c6c6 solid !important;
 	box-shadow:none !important;
 	text-shadow:none !important;
 	}
@@ -58,10 +60,12 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	border:thin #a6aaa6 solid !important;
+	border:thin #c6c6c6 solid !important;
 	}
 .no_person .ui-input-text input{
 	border-color:#a6aaa9 !important;
 	text-align:center;
 	}
-	
+.login_sub{
+	text-decoration:none !important
+	}
