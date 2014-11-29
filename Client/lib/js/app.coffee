@@ -1,5 +1,5 @@
 $(document).ready ->
-  $("#registrationForm").on "submit", ->
+  $("#registrationForm").on("submit", ->
     usrname = $(".usrname").val()
     email = $(".email").val()
     mobileno = $(".mobileno").val()
@@ -19,10 +19,28 @@ $(document).ready ->
       success: (returnData) ->
         alert "success"
         return
-    return
+  )
+
+
+  $.ajax
+    type:"GET"
+    url:"data/popup.json"
+    dataType:"json"
+    success:(resp)->
+      if resp.popupflag is true
+        $('.usagewarning').popup('open')
+      return
+
 
   $('.pledge').on "click", ->
-    $('.consumtionoption').popup('close')
+    $('.usagewarning').popup('close')
     setTimeout(->
       $('.restorewater').popup('open')
+    ,1000)
+
+  $('.leaveit').on "click", ->
+    debugger
+    $('.usagewarning').popup('close')
+    setTimeout(->
+      ###$('.restorewater').popup('open')###
     ,1000)

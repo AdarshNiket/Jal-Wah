@@ -36,7 +36,7 @@
                     <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">             
 			</div>            
         </form>
-        <a href="#home"><button class="ui-btn button_blue">Now let’s <strong>save some water!</strong></button></p>
+        <a href="#home"><button class="ui-btn button_blue">Now let’s <strong>save some water!</strong></button></a>
     </div><!-- /content -->
 </div>
 <!-- /Login page -->
@@ -47,14 +47,13 @@
 		<h1>JAL-WAH!</h1>
 	</div>
 	<div data-role="main" class="ui-content">
-		<a href="#usagewarning" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Show Popup</a>
-		<div data-role="popup" id="usagewarning" class="consumtionoption">
-  			<p>You have consume maximum threshold water level alloted.Please select option (1) to get normal water supply or option (2) to continue with same.</p>
-  			<button class="pledge">1. I pledge not to consume so much water</button>
-  			<button class="leaveit">2. I don't give a damn about it.</button>
+		<div data-role="popup" id="usagewarning" class="usagewarning">
+  			<p>You have crossed your threshold limit for this week and your water flow has been reduced to 60%.</p>
+  			<button class="pledge">I pledge to reduce my water consumption.This will restore your water flowto 100%.(This is your 2nd pledge this year).</button>
+  			<button class="leaveit">I want to improve! I am fine with 60% water flow.(Your normal water flow will be re-stored after 24hrs).</button>
 		</div>
 		<div data-role="popup" class="restorewater">
-  			<p>Congratulations your water supply is restored to normal. Thank you for co-operation.</p>
+  			<p>Thank you for pledging to reduce your water consumption.<br>Your water flow has been restored to 100%</p>
 		</div>
 	</div>
 </div>
