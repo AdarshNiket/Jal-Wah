@@ -3,7 +3,7 @@
 	"description": "The water saving initiative",
 	"version": "0.0.1",
 	"author": {
-		"name": "Clarice Technologies.com",
+		"name": "Clarice Technologies",
 		"email": "hilarudeen.s@claricetechnologies.com"
 	},
 	"coauthors": [
@@ -19,7 +19,7 @@
 		"session-mongoose": "0.2.2"
 	},
 	"keywords": ["framework", "web", "server", "mvc"],
-	"main": "index",
+	"main": "app",
 	"engines": {
 		"node": "*"
 	},

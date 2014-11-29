@@ -1,19 +1,19 @@
 /**
- * File Name: login.js,
- * Author: hilarudeens,
- * Date Created: 10th Oct 2012,
- * Description: To render login page.
+ * File Name: user.js,
+ * Author: Clarice Technologies,
+ * Date Created: 29th Nov 2014,
+ * Description: This is used to manage user activities.
  */
 var dbcontrol = require('./db/dbcontrol');
+var userModel = dbcontrol('userModel').userModel;
 var fs = require("fs");
 
 var readUserData = function(request, response, next) {
-
 	if (request.params.emailId) {
 		condition = {
 			emailId : request.params.emailId
 		};
-		userModel = dbcontrol('userModel').userModel;
+		console.log("condition is", condition);
 		userModel.find(condition, function(err, results) {
 			if (results.length && results[0].emailId === request.params.emailId) {
 				response.send({
@@ -58,20 +58,6 @@ var readUserData = function(request, response, next) {
 
 		});*/
 
-		/*userModel.insertUser({
-		residentName : "Hilarudeen",
-		emailId : "udeen.smart@gmail.com",
-		mobileNumber : "123456",
-		peopleInHome : "6",
-		invitedMembers : ["1",'2']
-		}, function(err) {
-		console.log("saving attempt");
-		console.log(arguments);
-		response.send({
-		status : 'SUCCESS',
-		isEnabled : true
-		});
-		});
 		/*userModel.find({
 		"emailId" : request.params.emailId
 		}, function(err, result) {
@@ -96,6 +82,30 @@ var readUserData = function(request, response, next) {
 	}
 };
 
+var saveUserData = function(request, response, next) {
+	console.log('POST body');
+	console.log(request.body);
+	var userData = request.body;
+
+	// Testing code start.
+	// /userData = {
+	// residentName : "Hilarudeen",
+	// emailId : "udeen.smart@gmail.com",
+	// mobileNumber : "123456",
+	// peopleInHome : "6",
+	// invitedMembers : ["1", '2']
+	// };
+	// Testing code end.
+
+	userModel.insertUser(userData, function(err, results) {
+		console.log("saving attempt");
+		console.log(arguments);
+		response.send({
+			status : 'SUCCESS',
+			isEnabled : true
+		});
+	});
+}
 /*
  var loginFormSubmit = function(request, response, next) {
  var username = request.body.username;
@@ -114,5 +124,5 @@ exports.checkUserHandler = function(request, response, next) {
 	if (request.method == 'GET')
 		readUserData(request, response, next);
 	else if (request.method == 'POST')
-		loginFormSubmit(request, response, next);
+		saveUserData(request, response, next);
 };

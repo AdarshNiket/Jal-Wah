@@ -41,7 +41,11 @@ app.configure(function configuration() {
 		store : mongooseSessionStore
 	}));
 	app.use(express.bodyParser());
-
+	app.use(function(req, res, next) {
+		res.header("Access-Control-Allow-Origin", "*");
+		res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+		next();
+	})
 	// app.use('/files', express.static(basePath + '/files'));
 	// app.use('/images', express.static(viewsPath + '/images'));
 	// app.use('/css', express.static(viewsPath + '/css'));
@@ -68,19 +72,21 @@ bootup = function() {
 			process.exit();
 		} else {
 			// Testing code start
+			/*
 			var dbcontrol = require('./modules/db/dbcontrol');
 			var userModel = dbcontrol('userModel').userModel;
 			userModel.insertUser({
-				residentName : "Hilarudeen",
-				emailId : "hilar@gmail.com",
-				mobileNumber : "123456",
-				peopleInHome : "6",
-				invitedMembers : ["1", '2']
+			residentName : "Hilarudeen",
+			emailId : "hilar@gmail.com",
+			mobileNumber : "123456",
+			peopleInHome : "6",
+			invitedMembers : ["1", '2']
 			}, function(err) {
-				console.log("saving attempt");
-				console.log(arguments);
+			console.log("saving attempt");
+			console.log(arguments);
 
 			});
+			*/
 			// Testing code end
 			console.log('Database has been connected.');
 			if ( typeof appStart === 'function')
@@ -90,4 +96,5 @@ bootup = function() {
 
 };
 
+// Bootup application.
 bootup();

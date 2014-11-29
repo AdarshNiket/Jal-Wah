@@ -1,53 +1,68 @@
-$(document).ready ->
-  $("#registrationForm").on("submit", ->
+# App load Event Handlers
+$(document).ready(->
+  EMAIL_KEY = 'emailId'
+  emailId = localStorage.getItem(EMAIL_KEY)
+
+  if emailId
+    $.ajax
+        type: "GET"
+        url: "/checkUser/"+emailId
+        dataType: "json"
+    .done (resp)->
+        $(".usagewarning").popup "open"  if resp.popupflag is true
+        return
+
+  # $("#registrationForm .submit").on("click", ->
+  #   $("#registrationForm").trigger("submit")
+  # )
+  
+  $("#registrationForm").on "submit", ->
     usrname = $(".usrname").val()
     email = $(".email").val()
     mobileno = $(".mobileno").val()
     size = $(".peopleinhome").val()
+    # invitedMembers = 
     postData =
-      usrname: usrname
-      flatno: flatno
-      email: email
-      mobileno: mobileno
-      size: size
+      residentName: usrname
+      emailId: email
+      mobileNumber: mobileno
+      peopleInHome: size
+      # invitedMembers: [
+      #   "sreejith@gmail.com"
+      #   "adarsh@gmail.com"
+      # ]
 
     $.ajax
       type: "POST"
-      url: ""
+      url: serverHost + "/createUser"
+      crossDomain: true
       data: postData
       dataType: "json"
-      success: (returnData) ->
-        alert "success"
+    .done (returnData)->
+        if returnData.status is 'SUCCESS'
+          localStorage.setItem(EMAIL_KEY, 'hai@gmail.com')
+          window.location.hash = "#home"
         return
-  )
+    .fail ->
+      return
+  return false
+) 
 
-  $('.submit').on("click", ->
-    window.location.hash = "#home"
+
+# Pledge Page Event Handlers  
+$(document).ready(->
+  $(".pledge").on "click",->
+    $(".usagewarning").popup "close"
+    
     setTimeout(->
-      $.ajax
-        type:"GET"
-        url:"data/popup.json"
-        dataType:"json"
-        success:(resp)->
-          if resp.popupflag is true
-            $('.usagewarning').popup('open')
-          return
-    ,1000)    
-  )
-
-
-  $('.pledge').on "click", ->
-    $('.usagewarning').popup('close')
+      $(".restorewater").popup "open"
+    , 1000)
     setTimeout(->
-      $('.restorewater').popup('open')
-    ,1000)
-    setTimeout(->
-      $('.restorewater').popup('close')
-    ,5000)
+      $(".restorewater").popup "close"
+    , 5000)
 
-  $('.leaveit').on "click", ->
+  $(".leaveit").on "click", ->
     debugger
-    $('.usagewarning').popup('close')
-    setTimeout(->
-      ###$('.restorewater').popup('open')###
-    ,1000)
+    $(".usagewarning").popup "close"
+  return
+)
