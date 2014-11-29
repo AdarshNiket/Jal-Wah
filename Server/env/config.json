@@ -1,0 +1,11 @@
+{
+    "development": {
+    		"appPort": "3000",
+        "MONGO_URI": "mongodb://@localhost:27017/jalwahdb",
+        "MONGO_OPTIONS": { "db": { "safe": true } }
+    },
+    "production": {
+        "MONGO_URI": "mongodb://localhost/production",
+        "MONGO_OPTIONS": { "db": { "safe": true } }
+    }
+}
