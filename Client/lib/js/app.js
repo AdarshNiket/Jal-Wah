@@ -13,7 +13,7 @@ $(document).ready(function() {
       mobileno: mobileno,
       size: size
     };
-    $.ajax({
+    return $.ajax({
       type: "POST",
       url: "",
       data: postData,
@@ -23,10 +23,28 @@ $(document).ready(function() {
       }
     });
   });
-  return $('.pledge').on("click", function() {
-    $('.consumtionoption').popup('close');
+  $.ajax({
+    type: "GET",
+    url: "data/popup.json",
+    dataType: "json",
+    success: function(resp) {
+      if (resp.popupflag === true) {
+        $('.usagewarning').popup('open');
+      }
+    }
+  });
+  $('.pledge').on("click", function() {
+    $('.usagewarning').popup('close');
     return setTimeout(function() {
       return $('.restorewater').popup('open');
+    }, 1000);
+  });
+  return $('.leaveit').on("click", function() {
+    debugger;
+    $('.usagewarning').popup('close');
+    return setTimeout(function() {
+
+      /*$('.restorewater').popup('open') */
     }, 1000);
   });
 });
