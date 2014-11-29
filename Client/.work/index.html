@@ -12,13 +12,9 @@
 		</script> 
   <script src="lib/js/dev/jquery.js"></script> 
   <script src="lib/js/dev/jquery.mobile-1.4.5.min.js"></script> 
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script> 
+  <script src="lib/js/dev/highcharts.js"></script> 
   <script src="lib/js/app.js"></script> 
  </head> 
-<<<<<<< HEAD
- <body>
-   &lt;% partial &quot;partials/login.html&quot; %&gt; &lt;% partial &quot;partials/home.html&quot; %&gt; &lt;% partial &quot;partials/impact.html&quot; %&gt;   
-=======
  <body> 
   <!-- Login page --> 
   <div data-role="page" id="login" style="display:none;"> 
@@ -52,30 +48,22 @@
   <!-- Home page --> 
   <div data-role="page" id="home"> 
    <div data-role="panel" id="myPanel"> 
-    <a href="#home">B206,Ozone EverGreen</a>
-    <br /> 
-    <a href="#impact">Impact</a>
-    <br /> 
-    <a href="#leader">Leader Board</a>
-    <br /> 
-    <a href="javascript:void(0);">Discussion Board</a>
-    <br /> 
-    <a href="javascript:void(0);">Invite Others</a>
-    <br /> 
-    <a href="javascript:void(0);">Profile</a> 
+    <p>B206,Ozone EverGreen</p> 
+    <p>Impact</p> 
+    <p>Leader Board</p> 
+    <p>Discussion Board</p> 
+    <p>Invite Others</p> 
+    <p>Profile</p> 
    </div> 
    <div data-role="header" class="bj_blue"> 
     <span class="icon-menu"><a href="#myPanel"></a></span> 
     <span class="icon-Pledge" style="display:none"></span> 
     <span class="icon-notification"></span>
     <span class="red_tip">1</span> 
-    <div data-role="popup" class="notification"> 
-     <p>Thank you for pledging to reduce your water consumption.<br /> Your water flow has been restored to 100% </p> 
-    </div> 
     <h1>JAL-WAH!</h1> 
    </div> 
    <div data-role="main" class="ui-content"> 
-    <div data-role="popup" class="usagewarning"> 
+    <div data-role="popup" id="usagewarning" class="usagewarning"> 
      <p>You have crossed your threshold limit for this week and your water flow has been reduced to 60%.</p> 
      <button class="pledge">I pledge to reduce my water consumption.This will restore your water flowto 100%.(This is your 2nd pledge this year).</button> 
      <button class="leaveit">I want to improve! I am fine with 60% water flow.(Your normal water flow will be re-stored after 24hrs).</button> 
@@ -88,29 +76,18 @@
   <!-- /Home page --> 
   <!-- Impact page --> 
   <div data-role="page" id="impact"> 
-   <div data-role="panel" id="myPanel1"> 
-    <a href="#home">B206,Ozone EverGreen</a>
-    <br /> 
-    <a href="#impact">Impact</a>
-    <br /> 
-    <a href="#leader">Leader Board</a>
-    <br /> 
-    <a href="javascript:void(0);">Discussion Board</a>
-    <br /> 
-    <a href="javascript:void(0);">Invite Others</a>
-    <br /> 
-    <a href="javascript:void(0);">Profile</a> 
+   <div data-role="panel" id="myPanel"> 
+    <p>B206,Ozone EverGreen</p> 
+    <p>Impact</p> 
+    <p>Leader Board</p> 
+    <p>Discussion Board</p> 
+    <p>Invite Others</p> 
+    <p>Profile</p> 
    </div> 
    <!-- header --> 
    <div data-role="header" class="bj_blue"> 
-<<<<<<< Updated upstream
     <span class="icon-menu"><a href="#myPanel"></a></span> 
     <span class="icon-logo"><a href=""></a></span> 
-=======
-    <span class="icon-menu"><a href="#myPanel1"></a></span> 
-    <span class="icon-Pledge" style="display:none"></span> 
-    <span class="icon-logo"></span> 
->>>>>>> Stashed changes
     <span class="top_text_1">Impact</span> 
     <span class="icon-notification"><a href=""></a></span>
     <span class="red_tip">1</span> 
@@ -143,6 +120,5 @@
    </div> 
    <!-- /Impact page -->   
   </div>
->>>>>>> origin/master
  </body>
 </html>
