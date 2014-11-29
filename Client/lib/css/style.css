@@ -92,6 +92,7 @@
 	left: -25px;
 	top: -7px;
 	cursor: pointer;
+	z-index: 1;
 }
 .icon-logo {
 	background-image: url(img/logo.svg);
@@ -105,6 +106,7 @@
 	left: 10px;
 	top: 0px;
 	cursor: pointer;
+	z-index: 1;
 }
 .icon-notification {
 	background-image: url(img/notification.svg);
@@ -118,6 +120,7 @@
 	right: 0;
 	top: 2px;
 	cursor: pointer;
+	z-index: 1;
 }
 .icon-menu a{
 	display:inline-block;
@@ -132,6 +135,7 @@
 	line-height: 40px;
 	margin-left: 47px;
 	font-size:19px;
+	z-index: 1;
 	}
 .red_tip{
 	width: 31px;
@@ -153,5 +157,27 @@
 	color: #FFF;
 	text-shadow: none;
 	text-align: center;
-
+	z-index: 2;
+	}
+.impact_tab{
+	padding:0;
+	top: -20px;
+	}
+.height_fit{
+	height: 100vh;
+	}
+.impact_tab .ui-btn.ui-btn-active{
+	background-color:#f3f4f6 !important;
+	border-left-color:#dddddd !important;
+	text-shadow:none !important;
+	outline:none !important;
+	color:#9b9b9b !important;
+	font-weight:bold !important;
+	box-shadow:none !important;
+	border-bottom:#01c7f4 thin solid !important;
+	}
+.impact_tab .ui-btn{
+	color:#c2c2c2 !important;
+	border-style:dashed !important;
+	font-weight:normal !important;
 	}
