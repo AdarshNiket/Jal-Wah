@@ -1,12 +1,16 @@
 @charset "utf-8";
 /* CSS Document */
+@media only screen and (min-device-width: 480px){
+	
+	
+	}
 .bj_blue{
-	background:#51a7f9 !important;
+	background:#01c7f4 !important;
 	border:none !important;
 	height:60px;
 	}
 .button_blue{
-	background-color:#51a7f9 !important;
+	background-color:#01c7f4 !important;
 	color:#FFF !important;
 	text-shadow:none !important;
 	font-weight:normal !important;
@@ -49,12 +53,8 @@
 	margin-top: 22px !important;
 	}
 .no_person .ui-input-text{	
-	background-image:url(img/list_bj.png) !important;
-	background-repeat:no-repeat !important;
-	background-position:85% 50% !important;
 	background-color:transparent !important;
 	width:20% !important;
-	background-size:7px;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -64,3 +64,4 @@
 	border-color:#a6aaa9 !important;
 	text-align:center;
 	}
+	
