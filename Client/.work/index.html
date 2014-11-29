@@ -87,33 +87,38 @@
    <!-- header --> 
    <div data-role="header" class="bj_blue"> 
     <span class="icon-menu"><a href="#myPanel"></a></span> 
-    <span class="icon-Pledge" style="display:none"></span> 
-    <span class="icon-logo"></span> 
+    <span class="icon-logo"><a href=""></a></span> 
     <span class="top_text_1">Impact</span> 
-    <span class="icon-notification"></span>
+    <span class="icon-notification"><a href=""></a></span>
     <span class="red_tip">1</span> 
-   </div>
-   <!-- /header --> 
-   <!-- content --> 
-  </div> 
-  <!-- /Impact page --> 
-  <div id="page-1" data-role="page"> 
-   <div data-role="header"> 
-    <a href="#" data-icon="arrow-l" data-iconpos="left" data-rel="back" data-transition="slide" data-direction="reverse">Back</a> 
-    <h1>Page 1</h1> 
+    <div data-role="tabs" id="tabs" class="impact_tab">
+      &nbsp;&nbsp;
+     <div data-role="navbar">
+       &nbsp;&nbsp;&nbsp;&nbsp;
+      <ul class="ui_bottom_line">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <li><a href="#one" data-ajax="false" class="impact_tab_a">Day</a></li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <li><a href="#two" data-ajax="false">Week</a></li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <li><a href="ajax-content-ignore.html" data-ajax="false">Month</a></li> &nbsp;&nbsp;&nbsp;&nbsp;
+      </ul> &nbsp;&nbsp;
+     </div> &nbsp;&nbsp;
+     <div id="one" class="ui-body-d ui-content height_fit day_01">
+       &nbsp;&nbsp;&nbsp;&nbsp;
+      <h1></h1> &nbsp;&nbsp;
+     </div> &nbsp;&nbsp;
+     <div id="two" class="ui-body-d ui-content height_fit">
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <h1>Week</h1> &nbsp;&nbsp;
+     </div> &nbsp;
+     <div id="two" class="ui-body-d ui-content height_fit">
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <h1>Month</h1> &nbsp;&nbsp;
+     </div> 
+    </div>
+    <!-- /header --> 
+    <!-- content --> 
    </div> 
-   <div data-role="content"> 
-    <p> Page 1 content </p> 
-   </div> 
-   <div data-role="footer" data-position="fixed"> 
-    <div data-role="navbar"> 
-     <ul> 
-      <li> <a href="#page-1" data-role="tab" data-icon="grid" class="ui-btn-active">Page 1</a> </li> 
-      <li> <a href="#page-2" data-role="tab" data-icon="grid">Page 2</a> </li> 
-      <li> <a href="#page-3" data-role="tab" data-icon="grid">Page 3</a> </li> 
-     </ul> 
-    </div> 
-   </div> 
-  </div>   
+   <!-- /Impact page -->   
+  </div>
  </body>
 </html>
