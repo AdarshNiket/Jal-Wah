@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <link rel="stylesheet" href="lib/css/dev/jquery.mobile-1.4.5.css" /> 
+  <link rel="stylesheet" href="lib/css/style.css" type="text/css" /> 
+  <script src="lib/js/dev/jquery.mobile-1.4.5.js"></script> 
+  <script src="lib/js/dev/jquery-2.1.1.js"></script> 
+  <style type="text/css">
+	.box{
+		min-height: 50px;
+		min-width: 100px;
+		background-color: #ccc;
+		border: 1px solid #000;
+	}
+	.header{
+		/*margin-bottom: 10px;*/
+	}
+	.content{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.left{
+		float: left;
+	}
+	.right{
+		float: right;
+	}
+	.clear{
+		clear: both;
+	}
+	</style> 
+ </head> 
+ <body> 
+  <div data-role="header" class="box header"> 
+   <h3>This is Header Part</h3> 
+  </div> 
+  <div data-role="main" class="ui-content box content"> 
+   <h3>This is main Body Part</h3> 
+   <div class="box"> 
+    <div class="box left">
+     Sidebar
+    </div> 
+    <div class="box left">
+     content area
+    </div> 
+    <div class="clear"></div> 
+   </div> 
+  </div> 
+  <div data-role="footer" class="box"> 
+   <h3>This Is footer part</h3> 
+  </div>   
+ </body>
+</html>
