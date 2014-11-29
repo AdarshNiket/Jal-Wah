@@ -5,6 +5,13 @@
 	border:none !important;
 	height:60px;
 	}
+.button_blue{
+	background-color:#51a7f9 !important;
+	color:#FFF !important;
+	text-shadow:none !important;
+	font-weight:normal !important;
+	font-stretch:normal !important;
+	}
 .bj_blue .ui-title{
 	font-size:24px !important;
 	padding-top:11px !important;
@@ -31,4 +38,25 @@
 	border:none !important;
 	box-shadow:none !important;
 	text-shadow:none !important;
+	}
+.no_person label{
+	width:76% !important;
+	position: absolute;
+	top: 7px;
+	left: 0;
+	}
+.no_person{
+	margin-top: 22px !important;
+	}
+.no_person .ui-input-text{
+	background:none !important;	
+	width:20% !important;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border:thin #a6aaa6 solid !important;
+	}
+.no_person .ui-input-text input{
+	border-color:#a6aaa9 !important;
+	text-align:center;
 	}
