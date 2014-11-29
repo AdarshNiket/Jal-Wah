@@ -13,7 +13,6 @@ var readUserData = function(request, response, next) {
 		condition = {
 			emailId : request.params.emailId
 		};
-		console.log("condition is", condition);
 		userModel.find(condition, function(err, results) {
 			if (results.length && results[0].emailId === request.params.emailId) {
 				response.send({
@@ -35,45 +34,6 @@ var readUserData = function(request, response, next) {
 			}
 		});
 
-		/*userModel.find(condition, function(err, results) {
-		console.log("Result");
-		console.log(results);
-
-		if (results[0].emailId === request.params.emailId) {
-		response.send({
-		status : 'SUCCESS',
-		isEnabled : true
-		});
-		} else if (!err) {
-		response.send({
-		status : 'SUCCESS',
-		isEnabled : false
-		});
-		} else {
-		response.send({
-		status : 'FAILED',
-		errMsg : 'Could not read data.'
-		});
-		}
-
-		});*/
-
-		/*userModel.find({
-		"emailId" : request.params.emailId
-		}, function(err, result) {
-
-		});*/
-
-		// userModel.insertBook({
-		// title : title,
-		// author : author,
-		// isbn : isbn,
-		// description : description,
-		// file : filePath
-		// }, function(err) {
-		// response.redirect('/addbooks');
-		// });
-
 	} else {
 		response.send({
 			status : 'FAILED',
@@ -83,8 +43,7 @@ var readUserData = function(request, response, next) {
 };
 
 var saveUserData = function(request, response, next) {
-	console.log('POST body');
-	console.log(request.body);
+
 	var userData = request.body;
 
 	// Testing code start.
@@ -106,19 +65,6 @@ var saveUserData = function(request, response, next) {
 		});
 	});
 }
-/*
- var loginFormSubmit = function(request, response, next) {
- var username = request.body.username;
- var password = request.body.password;
- var user = dbcontrol.userCollection;
-
- if (username === 'admin' && password === 'admin') {
- request.session.username = username;
- response.redirect('/');
- } else {
- response.redirect('/adminlogin');
- }
- };*/
 
 exports.checkUserHandler = function(request, response, next) {
 	if (request.method == 'GET')

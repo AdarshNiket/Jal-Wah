@@ -4,9 +4,17 @@
 	"version": "0.0.1",
 	"author": {
 		"name": "Clarice Technologies",
-		"email": "hilarudeen.s@claricetechnologies.com"
+		"email": "cicbangalorenov2014@claricetechnologies.com"
 	},
 	"coauthors": [
+		{
+			"name": "Adarsh",
+			"email": "adarsh.niket@claricetechnologies.com"
+		},	
+		{
+			"name": "hilarudeens",
+			"email": "hilarudeen.s@claricetechnologies.com"
+		},
 		{
 			"name": "Sreejith",
 			"email": "sreejith.pillai@claricetechnologies.com"
@@ -18,7 +26,7 @@
 		"jade": "0.28.2",
 		"session-mongoose": "0.2.2"
 	},
-	"keywords": ["framework", "web", "server", "mvc"],
+	"keywords": ["framework", "web", "server", "rest"],
 	"main": "app",
 	"engines": {
 		"node": "*"
