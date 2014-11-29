@@ -54,6 +54,13 @@ $(document).ready(function() {
   });
   $(".leaveit").on("click", function() {
     debugger;
+<<<<<<< HEAD
     return $(".usagewarning").popup("close");
+=======
+    $('.usagewarning').popup('close');
+    return setTimeout(function() {
+      return $('.icon-Pledge').show();
+    }, 1000);
+>>>>>>> f7f70c07120751d434b34293dec48db7f90163dd
   });
 });

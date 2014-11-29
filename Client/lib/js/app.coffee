@@ -63,6 +63,13 @@ $(document).ready(->
 
   $(".leaveit").on "click", ->
     debugger
+<<<<<<< HEAD
     $(".usagewarning").popup "close"
   return
 )
+=======
+    $('.usagewarning').popup('close')
+    setTimeout(->
+      $('.icon-Pledge').show()
+    ,1000)
+>>>>>>> f7f70c07120751d434b34293dec48db7f90163dd

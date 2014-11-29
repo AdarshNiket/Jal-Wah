@@ -42,19 +42,24 @@
              <input type="text" placeholder="Enter email" value="" class="text_align email">
              <div class="ui-field-contain no_person">
              	    <label for="number-1 ">Number of people in home:</label>
-                    <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="" class="peopleinhome">             
-			</div>            
-        
-        <p><button class="ui-btn button_blue submit">Now let’s <strong>save some water!</strong></button></p>
+
+                    <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="">             
+			</div>     
+            <label for="textinput-2">Invite others</label>
+            <input type="text" name="textinput-2" id="textinput-2" placeholder="Invite others" value="">       
         </form>
-        
+        <p><button class="ui-btn button_blue submit login_sub">Now let’s <strong>save some water!</strong></button></p>
+</form>
+         <a href="#impact" >Imoact</a>
+
     </div><!-- /content -->
 </div>
 <!-- /Login page -->
 
 <!-- Home page -->
 <div data-role="page" id="home">
-	<div data-role="header" class="bj_blue"><span class="icon-Pledge"></span>
+	<div data-role="header" class="bj_blue">
+		<span class="icon-Pledge" style="display:none"></span>
 		<h1>JAL-WAH!</h1>
 	</div>
 	<div data-role="main" class="ui-content">
@@ -70,20 +75,40 @@
 </div>
 <!-- /Home page -->
 
-<!-- Imoact page -->
-<div data-role="page" id="imoact">
+<!-- Impact page -->
+<div data-role="page" id="impact">
 <div data-role="panel" id="myPanel"> 
     <a href="#login" class="login_sub"><button class="ui-btn button_blue">Back to login</button></a>
   </div>
-	<!-- header --><div data-role="header" class="bj_blue"><span class="icon-menu"><a href="#myPanel"></a></span> <h1>JAL-WAH!</h1></div><!-- /header -->
+	<!-- header -->
+    <div data-role="header" class="bj_blue">
+      <span class="icon-menu"><a href="#myPanel"></a></span>
+      <span class="icon-logo"><a href="#myPanel"></a></span> 
+      <span class="top_text_1">Impact</span>
+      <span class="icon-notification"><a href="#myPanel"></a></span><span class="red_tip">1</span>
+    </div><!-- /header -->
 	<!-- content -->
-    <div role="main" class="ui-content">
-    	
-              
-    </div><!-- /content -->
+    
 </div>
-<!-- /Imoact page -->
+<!-- /Impact page -->
 
-
+<div id="page-1" data-role="page">
+    <div data-role="header">
+        <a href="#" data-icon="arrow-l" data-iconpos="left" data-rel="back" data-transition="slide" data-direction="reverse">Back</a>
+        <h1>Page 1</h1>
+    </div>
+    <div data-role="content">
+        <p>Page 1 content</p>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#page-1" data-role="tab" data-icon="grid" class="ui-btn-active">Page 1</a></li>
+                <li><a href="#page-2" data-role="tab" data-icon="grid">Page 2</a></li>
+                <li><a href="#page-3" data-role="tab" data-icon="grid">Page 3</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 </body>
 </html>
