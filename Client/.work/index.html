@@ -7,35 +7,10 @@
   <link rel="stylesheet" href="lib/css/dev/jquery.mobile-1.4.5.css" /> 
   <link rel="stylesheet" type="text/css" href="lib/css/style.css" /> 
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" /> 
-<<<<<<< Updated upstream
-  <script src="lib/js/jquery.js"></script> 
-  <script src="lib/js/jquery.mobile-1.4.5.min.js"></script> 
- </head> 
- <body> 
-  <!-- Login page --> 
-  <div data-role="page" id="login"> 
-   <!-- header -->
-   <div data-role="header" class="bj_blue">
-    <h1>JAL-WAH!</h1>
-   </div>
-   <!-- /header --> 
-   <!-- content --> 
-   <div role="main" class="ui-content"> 
-    <p align="center"> Welcome to <br /> <strong>H007 OZONE EVERGREENS.</strong><br /> Let’s set up your profile. </p> 
-    <p align="center"> <img src="lib/css/img/user.png" /> </p> 
-    <form class="form_name"> 
-     <input type="text" placeholder="Enter Name" value="" class="text_align" /> 
-     <input type="text" placeholder="Enter Mobile Number" value="" class="text_align" /> 
-     <input type="text" placeholder="Enter email" value="" class="text_align" /> 
-    </form> 
-   </div>
-   <!-- /content --> 
-  </div>
-  <!-- /Login page -->   
-=======
   <script src="lib/js/dev/jquery.js"></script> 
   <script src="lib/js/dev/jquery.mobile-1.4.5.min.js"></script> 
   <script src="lib/js/dev/jquery.mobile-1.4.5.min.map"></script> 
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script> 
   <script src="lib/js/app.js"></script> 
  </head> 
  <body> 
@@ -48,6 +23,13 @@
   <!-- /header --> 
   <!-- content --> 
   <div role="main" class="ui-content"> 
+   <p align="center"> Welcome to <br /> <strong>H007 OZONE EVERGREENS.</strong><br /> Let’s set up your profile. </p> 
+   <p align="center"> <img src="lib/css/img/user.png" /> </p> 
+   <form class="form_name"> 
+    <input type="text" placeholder="Enter Name" value="" class="text_align" /> 
+    <input type="text" placeholder="Enter Mobile Number" value="" class="text_align" /> 
+    <input type="text" placeholder="Enter email" value="" class="text_align" /> 
+   </form> 
   </div>
   <!-- /content -->  --&gt; 
   <!-- /Login page --> 
@@ -56,10 +38,16 @@
    <div data-role="header" class="bj_blue"> 
     <h1>JAL-WAH!</h1> 
    </div> 
-   <div data-role="main" class="ui-content"></div> 
+   <div data-role="main" class="ui-content"> 
+    <a href="#usagewarning" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Show Popup</a> 
+    <div data-role="popup" id="usagewarning"> 
+     <p>You have consume maximum threshold water level alloted.Please select option (1) to get normal water supply or option (2) to continue with same.</p> 
+     <button class="pledge">1. I pledge not to consume so much water</button> 
+     <button class="pledge">2. I don't give a damn about it.</button> 
+    </div> 
+   </div> 
    <div data-role="footer"></div> 
   </div> 
   <!-- /Home page -->   
->>>>>>> Stashed changes
  </body>
 </html>
