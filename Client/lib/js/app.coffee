@@ -56,7 +56,7 @@ $(document).ready(->
 ) 
 
 
-# Pledge Page Event Handlers  
+# Home Page Event Handlers  
 $(document).ready(->
   $(".pledge").on "click",->
     $(".usagewarning").popup "close"
@@ -74,6 +74,11 @@ $(document).ready(->
       $('.icon-Pledge').show()
     ,1000)
   return
+
+  $('.icon-notification').on "click", ->
+    $('.notification').popup "open"
+
+
 )
 
     
