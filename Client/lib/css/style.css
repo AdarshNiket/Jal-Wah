@@ -48,9 +48,13 @@
 .no_person{
 	margin-top: 22px !important;
 	}
-.no_person .ui-input-text{
-	background:none !important;	
+.no_person .ui-input-text{	
+	background-image:url(img/list_bj.png) !important;
+	background-repeat:no-repeat !important;
+	background-position:85% 50% !important;
+	background-color:transparent !important;
 	width:20% !important;
+	background-size:7px;
 	position: absolute;
 	top: 0;
 	right: 0;
