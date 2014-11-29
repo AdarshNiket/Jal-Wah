@@ -13,3 +13,22 @@
 	text-shadow:none !important;
 	color:#FFF !important;
 	}
+.text_align{
+	text-align:center !important;
+	background-color:#dcdee0 !important;
+	border-color:#a6aaa9 !important;
+	border-radius:0px !important;
+	text-shadow:none !important;
+	}
+.border_radius0{
+	border-radius:0px !important;
+	}
+.form_name div{
+	border-radius:0px !important;
+	}
+.form_name .ui-input-text{
+	background-color:#dcdee0 !important;
+	border:none !important;
+	box-shadow:none !important;
+	text-shadow:none !important;
+	}
