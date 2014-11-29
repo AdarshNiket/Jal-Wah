@@ -23,21 +23,29 @@ $(document).ready(function() {
       }
     });
   });
-  $.ajax({
-    type: "GET",
-    url: "data/popup.json",
-    dataType: "json",
-    success: function(resp) {
-      if (resp.popupflag === true) {
-        $('.usagewarning').popup('open');
-      }
-    }
+  $('.submit').on("click", function() {
+    window.location.hash = "#home";
+    return setTimeout(function() {
+      return $.ajax({
+        type: "GET",
+        url: "data/popup.json",
+        dataType: "json",
+        success: function(resp) {
+          if (resp.popupflag === true) {
+            $('.usagewarning').popup('open');
+          }
+        }
+      });
+    }, 1000);
   });
   $('.pledge').on("click", function() {
     $('.usagewarning').popup('close');
-    return setTimeout(function() {
+    setTimeout(function() {
       return $('.restorewater').popup('open');
     }, 1000);
+    return setTimeout(function() {
+      return $('.restorewater').popup('close');
+    }, 5000);
   });
   return $('.leaveit').on("click", function() {
     debugger;
