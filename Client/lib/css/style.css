@@ -66,9 +66,6 @@
 	border-color:#a6aaa9 !important;
 	text-align:center;
 	}
-.login_sub{
-	text-decoration:none !important
-	}
 .icon-Pledge {
 	background-image: url(img/Pledge-02.svg);
 	background-repeat: no-repeat;
@@ -95,8 +92,61 @@
 	top: 0%;
 	cursor: pointer;
 }
+.icon-logo {
+	background-image: url(img/logo.svg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: 100%;
+	width: 44px;
+	display: inline-block;
+	height: 50px;
+	position: absolute;
+	left: 2%;
+	top: 10%;
+	cursor: pointer;
+}
+.icon-notification {
+	background-image: url(img/notification.svg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: 85%;
+	width: 44px;
+	display: inline-block;
+	height: 50px;
+	position: absolute;
+	right: 0;
+	top: 15%;
+	cursor: pointer;
+}
 .icon-menu a{
 	display:inline-block;
 	width: 44px;
 	height: 50px;
+	}
+.top_text_1{
+	height: 60px;
+	float: left;
+	color: #FFF;
+	text-shadow: none;
+	line-height: 60px;
+	margin-left: 13%;
+	font-size:19px;
+	}
+.red_tip{
+	width: 15px;
+	height: 15px;
+	background: red;
+	-moz-border-radius: 70px;
+	-webkit-border-radius: 70px;
+	border-radius: 7px;
+	display: inline-block;
+	position: absolute;
+	right: 2%;
+	top: 22%;
+	cursor: pointer;
+	box-shadow:none;
+	font-size:11px;
+	color:#FFF;
+	text-shadow:none;
+	text-align:center;
 	}
