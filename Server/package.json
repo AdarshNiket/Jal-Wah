@@ -3,10 +3,18 @@
 	"description": "The water saving initiative",
 	"version": "0.0.1",
 	"author": {
-		"name": "Clarice Technologies.com",
-		"email": "hilarudeen.s@claricetechnologies.com"
+		"name": "Clarice Technologies",
+		"email": "cicbangalorenov2014@claricetechnologies.com"
 	},
 	"coauthors": [
+		{
+			"name": "Adarsh",
+			"email": "adarsh.niket@claricetechnologies.com"
+		},	
+		{
+			"name": "hilarudeens",
+			"email": "hilarudeen.s@claricetechnologies.com"
+		},
 		{
 			"name": "Sreejith",
 			"email": "sreejith.pillai@claricetechnologies.com"
@@ -18,8 +26,8 @@
 		"jade": "0.28.2",
 		"session-mongoose": "0.2.2"
 	},
-	"keywords": ["framework", "web", "server", "mvc"],
-	"main": "index",
+	"keywords": ["framework", "web", "server", "rest"],
+	"main": "app",
 	"engines": {
 		"node": "*"
 	},

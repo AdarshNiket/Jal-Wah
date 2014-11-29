@@ -1,53 +1,80 @@
-$(document).ready ->
-  $("#registrationForm").on("submit", ->
+# App load Event Handlers
+$(document).ready(->
+  EMAIL_KEY = 'emailId'
+  emailId = localStorage.getItem(EMAIL_KEY)
+
+  if emailId
+    $.ajax
+        type: "GET"
+        url: serverHost + "/checkUser/"+emailId
+        dataType: "json"
+    .done (respData)->
+        if respData.status is 'SUCCESS'
+          window.location.hash = "#home"
+          $(".usagewarning").popup "open"  if respData.popupflag is true
+        else
+          $('#login').show()
+        return
+  else
+    $('#login').show()
+
+  # $("#registrationForm .submit").on("click", ->
+  #   $("#registrationForm").trigger("submit")
+  # )
+  
+  $("#registrationForm").on "submit", ($event)->
+    $event.preventDefault()
     usrname = $(".usrname").val()
     email = $(".email").val()
     mobileno = $(".mobileno").val()
     size = $(".peopleinhome").val()
+    # invitedMembers = 
     postData =
-      usrname: usrname
-      flatno: flatno
-      email: email
-      mobileno: mobileno
-      size: size
+      residentName: usrname
+      emailId: email
+      mobileNumber: mobileno
+      peopleInHome: size
+      # invitedMembers: [
+      #   "sreejith@gmail.com"
+      #   "adarsh@gmail.com"
+      # ]
 
     $.ajax
       type: "POST"
-      url: ""
+      url: serverHost + "/createUser"
+      crossDomain: true
       data: postData
       dataType: "json"
-      success: (returnData) ->
-        alert "success"
+    .done (respData)->
+        if respData.status is 'SUCCESS'
+          localStorage.setItem(EMAIL_KEY, email)
+          window.location.hash = "#home"
         return
-  )
+    .fail ->
+      return
+    return false
+) 
 
-  $('.submit').on("click", ->
-    window.location.hash = "#home"
+
+# Pledge Page Event Handlers  
+$(document).ready(->
+  $(".pledge").on "click",->
+    $(".usagewarning").popup "close"
+    
     setTimeout(->
-      $.ajax
-        type:"GET"
-        url:"data/popup.json"
-        dataType:"json"
-        success:(resp)->
-          if resp.popupflag is true
-            $('.usagewarning').popup('open')
-          return
-    ,1000)    
-  )
+      $(".restorewater").popup "open"
+    , 1000)
+    setTimeout(->
+      $(".restorewater").popup "close"
+    , 5000)
 
-
-  $('.pledge').on "click", ->
+  $(".leaveit").on "click", ->
     $('.usagewarning').popup('close')
     setTimeout(->
-      $('.restorewater').popup('open')
+      $('.icon-Pledge').show()
     ,1000)
-    setTimeout(->
-      $('.restorewater').popup('close')
-    ,5000)
+  return
+)
 
-  $('.leaveit').on "click", ->
-    debugger
-    $('.usagewarning').popup('close')
-    setTimeout(->
-      ###$('.restorewater').popup('open')###
-    ,1000)
+    
+
