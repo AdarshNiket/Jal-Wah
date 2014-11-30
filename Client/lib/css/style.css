@@ -174,7 +174,17 @@
 	left: 0px;
 	}
 .day_01{
-	background-image:url(img/daily%20impact.svg);
+	background-image:url(img/dailyImpact.svg);
+	background-position:left top;
+	background-repeat:no-repeat;
+	}
+.day_02{
+	background-image:url(img/weeklyImpact.svg);
+	background-position:left top;
+	background-repeat:no-repeat;
+	}
+.day_03{
+	background-image:url(img/monthlyImpact.svg);
 	background-position:left top;
 	background-repeat:no-repeat;
 	}
