@@ -237,3 +237,19 @@
 	min-width: 310px;
 	max-width: 800px;
 }
+.side_menu1{
+	background-color:#70b7e3 !important;
+	}
+.side_menu1 .user_img{
+	background-image:url(img/user.png);
+	background-repeat:no-repeat;
+	background-position:left top;
+	display:inline-block;
+	width:40px;
+	height:40px;
+	}
+.side_menu1 p{
+	font-size:24px;
+	font-weight:normal;
+	color:#FFF;
+	}
