@@ -36,9 +36,9 @@
       <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="" /> 
      </div> 
      <label for="textinput-2">Invite others</label> 
-     <input type="text" name="textinput-2" id="textinput-2" placeholder="Invite others" value="" /> 
-     <input type="text" name="textinput-2" id="textinput-2" placeholder="Invite others" value="" /> 
-     <p> <button class="ui-btn button_blue submit login_sub">Now let&acirc;€™s <strong>save some water!</strong></button> </p> 
+     <input type="text" name="textinput-2" id="textinput-2" placeholder="Invite others" value="" class="inviteemail abcd" /> 
+     <input type="text" name="textinput-2" id="textinput-2" placeholder="Invite others" value="" class="inviteemail" /> 
+     <p> <button class="ui-btn button_blue submit login_sub">Now let's <strong>save some water!</strong></button> </p> 
     </form> 
     <!-- <a href="#impact" >Imoact</a> --> 
    </div>
@@ -69,8 +69,8 @@
     <div data-role="collapsible" data-mini="true" class="notification_over">
      <h4>1</h4>
      <ul class="notification_ul" data-role="listview">
-      <li><a href="#">H 205 has pledged to use water responsibly.</a></li>
-      <li><a href="#">Congrats!, you have maintained below city..</a></li>
+      <li><a href="#" class="w_color">H 205 has pledged to use water responsibly.</a></li>
+      <li><a href="#">Congrats!, your water usage is below city avg.</a></li>
       <li><a href="#">Yay, Ozone evergreen, did it again</a></li>
      </ul>
     </div> 
@@ -84,17 +84,18 @@
     <h1>JAL-WAH!</h1> 
    </div> 
    <div data-role="main" class="ui-content"> 
+    <div></div> 
     <div data-role="tabs" id="tabs" class="impact_tab"> 
      <div data-role="navbar"> 
       <ul class="ui_bottom_line"> 
-       <li> <a href="#one" data-ajax="false" class="impact_tab_a">Daily</a> </li> 
-       <li> <a href="#two" data-ajax="false">Weekly</a> </li> 
-       <li> <a href="#three" data-ajax="false">Monthly</a> </li> 
+       <li> <a href="#one" data-ajax="false" data-frequency="daily" class="tabClick impact_tab_a ">Daily</a> </li> 
+       <li> <a href="#two" data-ajax="false" data-frequency="weekly" class="tabClick ">Weekly</a> </li> 
+       <li> <a href="#three" data-ajax="false" data-frequency="monthly" class="tabClick ">Monthly</a> </li> 
       </ul> 
      </div> 
-     <div id="one" class="ui-body-d ui-content height_fit"></div> 
-     <div id="two" class="ui-body-d ui-content height_fit"></div> 
-     <div id="two" class="ui-body-d ui-content height_fit"></div> 
+     <div id="one" class="chartArea daily ui-body-d ui-content height_fit"></div> 
+     <div id="two" class="chartArea weekly ui-body-d ui-content height_fit"></div> 
+     <div id="three" class="chartArea monthly ui-body-d ui-content height_fit"></div> 
     </div> 
     <div class="container" id="container"></div> 
     <div data-role="popup" class="usagewarning"> 

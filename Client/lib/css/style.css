@@ -316,7 +316,7 @@
 	top: -6px;
 	z-index: 100;
 	margin-top: 11px;
-	width: 76%;
+	width: 70%;
 	}
 .notification_over h4 {
 	opacity:0;
@@ -326,8 +326,10 @@
 	}
 .notification_ul li a{
 	background-color:#6eb7e4 !important;
-	color:#666d64 !important;
+	color:#666d64;
 	text-shadow:none !important;
+	font-weight:lighter ;
+	font-size: 13px !important;
 	}
 .notification_ul li a:Last-child{
 	border-radius:0px !important;
@@ -338,4 +340,7 @@
 .notification_ul li a::after{
 	background-image:none !important;
 	background-color:transparent !important;
+	}
+.w_color{
+	color:#FFF !important;
 	}
