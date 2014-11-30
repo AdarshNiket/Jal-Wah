@@ -183,33 +183,36 @@
 	left: 0px;
 	}
 .day_01{
-	background-image:url(img/dailyImpact.svg);
-	background-position:left top;
+	background-image:url(img/daily.svg);
+	background-position:42% 10px;
 	background-repeat:no-repeat;
+	background-size: 267px;
 	}
 .day_02{
-	background-image:url(img/weeklyImpact.svg);
-	background-position:left top;
+	background-image:url(img/weekly.svg);
+	background-position:42% 10px;
 	background-repeat:no-repeat;
+	background-size: 267px;
 	}
 .day_03{
-	background-image:url(img/monthlyImpact.svg);
-	background-position:left top;
+	background-image:url(img/monthly.svg);
+	background-position:42% 10px;
 	background-repeat:no-repeat;
+	background-size: 267px;
 	}
 .leaderboard_01{
 	background-image:url(img/leaderboardall.svg);
-	background-position:left top;
+	background-position:42% 4px;
 	background-repeat:no-repeat;
 	}
 .leaderboard_02{
 	background-image:url(img/leaderboardtop10.svg);
-	background-position:left top;
+	background-position:42% 4px;
 	background-repeat:no-repeat;
 	}
 .leaderboard_03{
 	background-image:url(img/leaderboardlast10.svg);
-	background-position:left top;
+	background-position:42% 4px;
 	background-repeat:no-repeat;
 	}
 .impact_tab .ui-btn.ui-btn-active{
