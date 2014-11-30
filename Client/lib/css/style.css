@@ -236,8 +236,8 @@
 .container{
 	min-width: 310px;
 	max-width: 800px;
-}
-.side_menu1{
+	margin: 0 auto;
+}.side_menu1{
 	background-color:#70b7e3 !important;
 	}
 .side_menu1 .user_img{
