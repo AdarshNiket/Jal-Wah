@@ -201,19 +201,22 @@
 	background-size: 267px;
 	}
 .leaderboard_01{
-	background-image:url(img/leaderboardall.svg);
-	background-position:42% 4px;
-	background-repeat:no-repeat;
+	background-image:url(img/all.svg);
+	background-position: 42% 11px;
+	background-size: 277px;
+	background-repeat: no-repeat;
 	}
 .leaderboard_02{
-	background-image:url(img/leaderboardtop10.svg);
-	background-position:42% 4px;
-	background-repeat:no-repeat;
+	background-image:url(img/top.svg);
+	background-position: 42% 11px;
+	background-size: 277px;
+	background-repeat: no-repeat;
 	}
 .leaderboard_03{
-	background-image:url(img/leaderboardlast10.svg);
-	background-position:42% 4px;
-	background-repeat:no-repeat;
+	background-image:url(img/bottom.svg);
+	background-position: 42% 11px;
+	background-size: 277px;
+	background-repeat: no-repeat;
 	}
 .impact_tab .ui-btn.ui-btn-active{
 	background-color:#f3f4f6 !important;
