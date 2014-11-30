@@ -253,3 +253,34 @@
 	font-weight:normal;
 	color:#FFF;
 	}
+.side_menu1 .ui-panel-inner a{
+	color: #FFF;
+	font-weight: lighter;
+	text-shadow: none;
+	text-decoration: none;
+	font-size: 19px;
+	line-height: 38px;
+	}
+.user_profile1{
+	width:100%;
+	height:100px;
+	display: inline-block;
+	}
+#leaderboard2{
+	height: 114%;
+	}
+#impact{
+	height: 114%;
+	}
+.user_profile1 img{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	float:left;
+}
+.user_profile1.box{
+	width:60%;
+	height:30px;
+	background-color:#06f;
+	float:left;
+	}
