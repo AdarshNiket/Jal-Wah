@@ -13,19 +13,19 @@
 			<div data-role="navbar">
 				<ul class="ui_bottom_line">
 					<li>
-						<a href="#one" data-ajax="false" class="impact_tab_a">Daily</a>
+						<a href="#one" data-ajax="false"  data-frequency="daily" class="tabClick impact_tab_a ">Daily</a>
 					</li>
 					<li>
-						<a href="#two" data-ajax="false">Weekly</a>
+						<a href="#two" data-ajax="false" data-frequency="weekly" class="tabClick ">Weekly</a>
 					</li>
 					<li>
-						<a href="#three" data-ajax="false">Monthly</a>
+						<a href="#three" data-ajax="false" data-frequency="monthly" class="tabClick ">Monthly</a>
 					</li>
 				</ul>
 			</div>
-			<div id="one" class="ui-body-d ui-content height_fit"></div>
-			<div id="two" class="ui-body-d ui-content height_fit"></div>
-			<div id="two" class="ui-body-d ui-content height_fit"></div>
+			<div id="one" class="chartArea daily ui-body-d ui-content height_fit"></div>
+			<div id="two" class="chartArea weekly ui-body-d ui-content height_fit"></div>
+			<div id="three" class="chartArea monthly ui-body-d ui-content height_fit"></div>
 		</div>
 		<div class="container" id="container"></div>
 		<div data-role="popup" class="usagewarning">
