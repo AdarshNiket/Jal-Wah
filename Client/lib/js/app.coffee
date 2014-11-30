@@ -111,7 +111,7 @@ $(document).ready(->
       url: serverHost + "/usageMetrics?flatId=b502&frequency="+freq
       crossDomain: true
       dataType: "json"
-    .done (respData)->
+    .done (responseData)->
         chartMetaData.xAxis.categories = responseData.data.periods
         chartMetaData.series = responseData.data.usages
         $('.charArea').html('')

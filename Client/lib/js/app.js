@@ -109,7 +109,7 @@ $(document).ready(function() {
       url: serverHost + "/usageMetrics?flatId=b502&frequency=" + freq,
       crossDomain: true,
       dataType: "json"
-    }).done(function(respData) {
+    }).done(function(responseData) {
       chartMetaData.xAxis.categories = responseData.data.periods;
       chartMetaData.series = responseData.data.usages;
       $('.charArea').html('');
