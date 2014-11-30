@@ -170,7 +170,16 @@
 	float: left;
 	overflow: hidden !important;
 	position: relative;
-	top: -24px;
+	top: 0px;
+	left: 0px;
+	}
+.leader_board{
+	height: 418px;
+	width: 100%;
+	float: left;
+	overflow: hidden !important;
+	position: relative;
+	top: 0px;
 	left: 0px;
 	}
 .day_01{
