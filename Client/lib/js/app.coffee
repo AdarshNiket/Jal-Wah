@@ -20,7 +20,7 @@ $(document).ready(->
 
   # $("#registrationForm .submit").on("click", ->
   #   $("#registrationForm").trigger("submit")
-  # )
+  # )  
   
   $("#registrationForm").on "submit", ($event)->
     $event.preventDefault()
@@ -28,16 +28,16 @@ $(document).ready(->
     email = $(".email").val()
     mobileno = $(".mobileno").val()
     size = $(".peopleinhome").val()
-    # invitedMembers = 
+    invitedMembers = $(".inviteemail").each (i, elem) ->
+      $(elem).val()
+    return
+ 
     postData =
       residentName: usrname
       emailId: email
       mobileNumber: mobileno
       peopleInHome: size
-      # invitedMembers: [
-      #   "sreejith@gmail.com"
-      #   "adarsh@gmail.com"
-      # ]
+      invitedMembers: invitedMembers 
 
     $.ajax
       type: "POST"
@@ -78,93 +78,46 @@ $(document).ready(->
   #$('.icon-notification').on "click", ->
     #$('.notification').popup "open"
 
-  $("#container").highcharts
+  chartMetaData =
   chart:
-    type: "bar"
-
-  title:
-    text: "Historic World Population by Region"
-
-  subtitle:
-    text: "Source: Wikipedia.org"
+    type: "column"
 
   xAxis:
-    categories: [
-      "Africa"
-      "America"
-      "Asia"
-      "Europe"
-      "Oceania"
-    ]
-    title:
-      text: null
+    categories: []
 
   yAxis:
     min: 0
     title:
-      text: "Population (millions)"
-      align: "high"
-
-    labels:
-      overflow: "justify"
+      text: "Rainfall (mm)"
 
   tooltip:
-    valueSuffix: " millions"
+    headerFormat: "<span style=\"font-size:10px\">{point.key}</span><table>"
+    pointFormat: "<tr><td style=\"color:{series.color};padding:0\">{series.name}: </td>" + "<td style=\"padding:0;width:15px;\"><b>{point.y:.1f} mm</b></td></tr>"
+    footerFormat: "</table>"
+    shared: true
+    useHTML: true
 
   plotOptions:
-    bar:
-      dataLabels:
-        enabled: true
+    column:
+      pointPadding: 0.2
+      borderWidth: 0
 
-  legend:
-    layout: "vertical"
-    align: "right"
-    verticalAlign: "top"
-    x: -40
-    y: 100
-    floating: true
-    borderWidth: 1
-    backgroundColor: ((Highcharts.theme and Highcharts.theme.legendBackgroundColor) or "#FFFFFF")
-    shadow: true
+  series: []
 
-  credits:
-    enabled: false
-
-  series: [
-    {
-      name: "Year 1800"
-      data: [
-        107
-        31
-        635
-        203
-        2
-      ]
-    }
-    {
-      name: "Year 1900"
-      data: [
-        133
-        156
-        947
-        408
-        6
-      ]
-    }
-    {
-      name: "Year 2008"
-      data: [
-        973
-        914
-        4054
-        732
-        34
-      ]
-    }
-  ]
-
-
+  $('.tabClick').on "click", ->
+    freq = $(this).data('frequency')
+    $.ajax
+      type: "GET"
+      url: serverHost + "/usageMetrics?flatId=b502&frequency="+freq
+      crossDomain: true
+      dataType: "json"
+    .done (respData)->
+        chartMetaData.xAxis.categories = responseData.data.periods
+        chartMetaData.series = responseData.data.usages
+        $('.charArea').html('')
+        $('.charArea.'+freq).highcharts(chartMetaData)
+        return
+    .fail ->
+      return
+    return false
 )
-
-    
-
