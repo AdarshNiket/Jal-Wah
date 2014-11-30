@@ -1,3 +1,56 @@
+window.global = {}
+
+(->
+
+chartMetaData =
+  chart:
+    type: "column"
+
+  xAxis:
+    categories: []
+
+  yAxis:
+    min: 0
+    title:
+      text: "Water Usage (ltrs)"
+
+  tooltip:
+    headerFormat: "<span style=\"font-size:10px\">{point.key}</span><table>"
+    pointFormat: "<tr><td style=\"color:{series.color};padding:0\">{series.name}: </td>" + "<td style=\"padding:0;width:15px;\"><b>{point.y:.1f} mm</b></td></tr>"
+    footerFormat: "</table>"
+    shared: true
+    useHTML: true
+
+  plotOptions:
+    column:
+      pointPadding: 0.2
+      borderWidth: 0
+
+  series: []
+
+window.global.renderChart =(freq, compareWidth)->
+  freq = freq or 'daily'
+  url = serverHost + "/usageMetrics?flatId=b502&frequency="+freq
+  if(compareWidth)
+    url = url + '&compareWidth='+compareWidth
+  
+  $.ajax
+    type: "GET"
+    url: url
+    crossDomain: true
+    dataType: "json"
+  .done (respData)->
+      if respData.status is 'SUCCESS'
+        chartMetaData.xAxis.categories = respData.data.periods
+        chartMetaData.series = respData.data.usages
+        $('.chartArea').html('')
+        $('.chartArea.'+freq).highcharts(chartMetaData)
+      return
+  .fail ->
+    return
+
+)()
+
 # App load Event Handlers
 $(document).ready(->
   EMAIL_KEY = 'emailId'
@@ -6,10 +59,12 @@ $(document).ready(->
   if emailId
     $.ajax
         type: "GET"
+        crossDomain: true
         url: serverHost + "/checkUser/"+emailId
         dataType: "json"
     .done (respData)->
         if respData.status is 'SUCCESS'
+          global.renderChart()
           window.location.hash = "#home"
           $(".usagewarning").popup "open"  if respData.popupflag is true
         else
@@ -28,9 +83,11 @@ $(document).ready(->
     email = $(".email").val()
     mobileno = $(".mobileno").val()
     size = $(".peopleinhome").val()
-    invitedMembers = $(".inviteemail").each (i, elem) ->
-      $(elem).val()
-    return
+    invitedMembers = []
+    $(".inviteemail").each (i, elem) ->
+      if $(elem).val()
+        invitedMembers.push($(elem).val())
+      return
  
     postData =
       residentName: usrname
@@ -48,6 +105,7 @@ $(document).ready(->
     .done (respData)->
         if respData.status is 'SUCCESS'
           localStorage.setItem(EMAIL_KEY, email)
+          global.renderChart()
           window.location.hash = "#home"
         return
     .fail ->
@@ -73,51 +131,14 @@ $(document).ready(->
     setTimeout(->
       $('.icon-Pledge').show()
     ,1000)
-  return
+    return
 
   #$('.icon-notification').on "click", ->
     #$('.notification').popup "open"
 
-  chartMetaData =
-  chart:
-    type: "column"
-
-  xAxis:
-    categories: []
-
-  yAxis:
-    min: 0
-    title:
-      text: "Rainfall (mm)"
-
-  tooltip:
-    headerFormat: "<span style=\"font-size:10px\">{point.key}</span><table>"
-    pointFormat: "<tr><td style=\"color:{series.color};padding:0\">{series.name}: </td>" + "<td style=\"padding:0;width:15px;\"><b>{point.y:.1f} mm</b></td></tr>"
-    footerFormat: "</table>"
-    shared: true
-    useHTML: true
-
-  plotOptions:
-    column:
-      pointPadding: 0.2
-      borderWidth: 0
-
-  series: []
 
   $('.tabClick').on "click", ->
     freq = $(this).data('frequency')
-    $.ajax
-      type: "GET"
-      url: serverHost + "/usageMetrics?flatId=b502&frequency="+freq
-      crossDomain: true
-      dataType: "json"
-    .done (respData)->
-        chartMetaData.xAxis.categories = responseData.data.periods
-        chartMetaData.series = responseData.data.usages
-        $('.charArea').html('')
-        $('.charArea.'+freq).highcharts(chartMetaData)
-        return
-    .fail ->
-      return
+    global.renderChart(freq);
     return false
 )

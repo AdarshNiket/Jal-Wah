@@ -10,8 +10,13 @@
 
 var readUsageMetrics = function(request, response, next) {
 	var query = request.query;
-	var searchKey = [query.flatId, query.frequency, query.compareWith].join('_');
+	var searchKey = [query.flatId, query.frequency];
+	if(query.compareWith)
+		searchKey.push(query.compareWith)
+	searchKey = searchKey.join('_');
 	var usageData = {};
+	
+	//console.log("search key ", searchKey);
 
 	switch(searchKey) {
 		case 'b502_daily_society':

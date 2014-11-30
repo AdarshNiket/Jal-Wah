@@ -43,7 +43,7 @@ var readUserData = function(request, response, next) {
 };
 
 var saveUserData = function(request, response, next) {
-
+	// console.log("called");
 	var userData = request.body;
 
 	// Testing code start.
