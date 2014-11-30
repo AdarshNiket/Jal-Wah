@@ -2,11 +2,23 @@
 <div data-role="page" id="home">
 	<%= partial "partials/menu" %>
 	<div data-role="header" class="bj_blue">
+    <div data-role="collapsible" data-mini="true" class="notification_over">
+            <h4>1</h4>
+            <ul data-role="listview">
+                <li><a href="#">List item 1</a></li>
+                <li><a href="#">List item 2</a></li>
+                <li><a href="#">List item 3</a></li>
+            </ul>
+        </div>
 		<span class="icon-menu"><a href="#myPanel"></a></span>
 		<span class="icon-Pledge" style="display:none"></span>
-		<span class="icon-notification"></span><span class="red_tip">1</span>
+		<span class="icon-notification"></span><span class="red_tip">1</span>        
+        <div data-role="popup" id="positionOrigin" class="ui-content" data-theme="a">
+        <p>I am positioned over the origin.</p>
+        </div>
 		<h1>JAL-WAH!</h1>
-	</div>
+	</div>  
+
 	<div data-role="main" class="ui-content">
 		<div data-role="tabs" id="tabs" class="impact_tab">
 			<div data-role="navbar">

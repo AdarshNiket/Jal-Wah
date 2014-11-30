@@ -258,12 +258,12 @@
 	font-weight: lighter;
 	text-shadow: none;
 	text-decoration: none;
-	font-size: 19px;
+	font-size: 17px;
 	line-height: 38px;
 	}
 .user_profile1{
-	width:100%;
-	height:100px;
+	width: 100%;
+	min-height: 73px;
 	display: inline-block;
 	}
 #leaderboard2{
@@ -278,9 +278,51 @@
 	height: 60px;
 	float:left;
 }
-.user_profile1.box{
-	width:60%;
-	height:30px;
-	background-color:#06f;
-	float:left;
+.user_profile1 .profile_box{
+	width: 69%;
+	height: 64px;
+	float: left;
+	padding-top: 6px;
+	padding-left: 10px;
+	}
+.user_profile1 .profile_box a{
+	color: #FFF;
+	font-weight: lighter;
+	text-shadow: none;
+	text-decoration: none;
+	font-size: 11px;
+	line-height: 19px;
+	}
+.user_profile1 .profile_box a:first-child{
+	color: #FFF;
+	font-size:16px;
+	font-weight:bold;
+	}
+.a_style{
+	background:none !important;
+	border:none !important;
+	box-shadow:none !important;
+	text-shadow:none !important;
+	margin:0;
+	padding:0;
+	}
+.notification_over{
+	background-color: transparent !important;
+	border: none !important;
+	text-shadow: none !important;
+	box-shadow: none !important;
+	position: absolute;
+	right: 0;
+	top: -6px;
+	z-index: 100;
+	}
+.notification_over h4{
+	background-color: transparent !important;
+	border: none !important;
+	text-shadow: none !important;
+	box-shadow: none !important;
+	position: absolute;
+	right: 0;
+	top: -6px;
+	z-index: 100;
 	}
