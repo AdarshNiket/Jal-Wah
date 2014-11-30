@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 @media only screen and (min-device-width: 447px){
-	.login_sub{
+.login_sub{
 	position: relative;
 	top: 22px;
 	}
@@ -315,14 +315,27 @@
 	right: 0;
 	top: -6px;
 	z-index: 100;
+	margin-top: 11px;
+	width: 76%;
 	}
-.notification_over h4{
-	background-color: transparent !important;
-	border: none !important;
-	text-shadow: none !important;
-	box-shadow: none !important;
-	position: absolute;
-	right: 0;
-	top: -6px;
-	z-index: 100;
+.notification_over h4 {
+	opacity:0;
+	}
+.notification_ul{
+	margin-top:-7px !important;
+	}
+.notification_ul li a{
+	background-color:#6eb7e4 !important;
+	color:#666d64 !important;
+	text-shadow:none !important;
+	}
+.notification_ul li a:Last-child{
+	border-radius:0px !important;
+	}
+.notification_ul li a:First-child{
+	color:#FFF ;
+	}
+.notification_ul li a::after{
+	background-image:none !important;
+	background-color:transparent !important;
 	}
