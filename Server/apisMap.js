@@ -16,13 +16,13 @@ exports.apis = [
   "callback" : "checkUserHandler",
   "methods" : "post",
   "file" : "./modules/user.js"
-}/*, 
+}, 
 {
-  "url" : "/adminlogin",
-  "callback" : "loginHandler",
-  "methods" : "get,post",
-  "file" : "./login.js"
-},
+  "url" : "/usageMetrics",
+  "callback" : "usageMetricsHandler",
+  "methods" : "get",
+  "file" : "./modules/metrics.js"
+}/*,
 {
    "url" : "/books",
    "callback" : "showBooks",
