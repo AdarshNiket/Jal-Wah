@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <title>JAL-WAH!</title> 
+  <link rel="stylesheet" href="lib/css/dev/jquery.mobile-1.4.5.css" /> 
+  <link rel="stylesheet" type="text/css" href="lib/css/style.css" /> 
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" /> 
+  <script type="text/javascript">
+			var serverHost = 'http://localhost:3000';
+		</script> 
+  <script src="lib/js/dev/jquery.js"></script> 
+  <script src="lib/js/dev/jquery.mobile-1.4.5.min.js"></script> 
+  <script src="lib/js/dev/highcharts.js"></script> 
+  <script src="lib/js/app.js"></script> 
+ </head> 
+ <body> 
+  <!-- Login page --> 
+  <div data-role="page" id="login" style="display:none;"> 
+   <!-- header --> 
+   <div data-role="header" class="bj_blue"> 
+    <h1>JAL-WAH!</h1> 
+   </div>
+   <!-- /header --> 
+   <!-- content --> 
+   <div role="main" class="ui-content"> 
+    <p align="center"><a href="#leaderboard2">Welcome</a> to<br /><strong>H007 OZONE EVERGREENS.</strong><br />Let&acirc;€™s set up your profile.</p> 
+    <p align="center"> <img src="lib/css/img/user.png" /> </p> 
+    <form id="registrationForm" class="form_name"> 
+     <input type="text" placeholder="Enter Name" value="" class="text_align usrname" /> 
+     <input type="text" placeholder="Enter Mobile Number" value="" class="text_align mobileno" /> 
+     <input type="text" placeholder="Enter email" value="" class="text_align email" /> 
+     <div class="ui-field-contain no_person">
+      <label for="number-1 ">Number of people in home:</label> &Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp; 
+      <input type="number" data-clear-btn="false" name="number-1" id="number-1" value="" /> 
+     </div> 
+     <label for="textinput-2">Invite others</label> 
+     <input type="text" name="textinput-2" id="textinput-2" placeholder="Invite others" value="" /> 
+     <p> <button class="ui-btn button_blue submit login_sub"> Now let&acirc;€™s <strong>save some water!</strong> </button> </p> 
+    </form> 
+    <a href="#impact">Imoact</a> 
+   </div>
+   <!-- /content --> 
+  </div> 
+  <!-- /Login page --> 
+  <!-- Home page --> 
+  <div data-role="page" id="home"> 
+   <div data-role="panel" id="myPanel"> 
+    <a href="#home">B206,Ozone EverGreen</a>
+    <br /> 
+    <a href="#impact">Impact</a>
+    <br /> 
+    <a href="leader">Leader Board</a>
+    <br /> 
+    <a href="javascript:void(0);">Discussion Board</a>
+    <br /> 
+    <a href="javascript:void(0);">Invite Others</a>
+    <br /> 
+    <a href="javascript:void(0);">Profile</a> 
+   </div> 
+   <div data-role="header" class="bj_blue"> 
+    <span class="icon-menu"><a href="#myPanel"></a></span> 
+    <span class="icon-Pledge" style="display:none"></span> 
+    <span class="icon-notification"></span>
+    <span class="red_tip">1</span> 
+    <h1>JAL-WAH!</h1> 
+   </div> 
+   <div data-role="main" class="ui-content"> 
+    <div data-role="popup" class="usagewarning"> 
+     <p>You have crossed your threshold limit for this week and your water flow has been reduced to 60%.</p> 
+     <button class="pledge">I pledge to reduce my water consumption.This will restore your water flowto 100%.(This is your 2nd pledge this year).</button> 
+     <button class="leaveit">I want to improve! I am fine with 60% water flow.(Your normal water flow will be re-stored after 24hrs).</button> 
+    </div> 
+    <div data-role="popup" class="restorewater"> 
+     <p> Thank you for pledging to reduce your water consumption. <br /> Your water flow has been restored to 100% </p> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- /Home page --> 
+  <!-- Impact page --> 
+  <div data-role="page" id="impact"> 
+   <div data-role="panel" id="myPanel1"> 
+    <a href="#home">B206,Ozone EverGreen</a>
+    <br /> 
+    <a href="#impact">Impact</a>
+    <br /> 
+    <a href="leader">Leader Board</a>
+    <br /> 
+    <a href="javascript:void(0);">Discussion Board</a>
+    <br /> 
+    <a href="javascript:void(0);">Invite Others</a>
+    <br /> 
+    <a href="javascript:void(0);">Profile</a>
+    <br /> 
+   </div> 
+   <!-- header --> 
+   <div data-role="header" class="bj_blue"> 
+    <span class="icon-menu"><a href="#myPanel1"></a></span> 
+    <span class="icon-logo"></span> 
+    <span class="top_text_1">Impact</span> 
+    <span class="icon-notification"></span>
+    <span class="red_tip">1</span> 
+    <div data-role="tabs" id="tabs" class="impact_tab">
+      &Acirc;&nbsp;&Acirc;&nbsp;
+     <div data-role="navbar">
+       &Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;
+      <ul class="ui_bottom_line">
+        &Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;
+       <li><a href="#one" data-ajax="false" class="impact_tab_a">Day</a></li> &Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;
+       <li><a href="#two" data-ajax="false">Week</a></li> &Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;
+       <li><a href="ajax-content-ignore.html" data-ajax="false">Month</a></li> &Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;
+      </ul> &Acirc;&nbsp;&Acirc;&nbsp;
+     </div> &Acirc;&nbsp;&Acirc;&nbsp;
+     <div id="one" class="ui-body-d ui-content height_fit day_01">
+       &Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;
+      <h1></h1> &Acirc;&nbsp;&Acirc;&nbsp;
+     </div> &Acirc;&nbsp;&Acirc;&nbsp;
+     <div id="two" class="ui-body-d ui-content height_fit day_02">
+       &Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;
+      <h1></h1> &Acirc;&nbsp;&Acirc;&nbsp;
+     </div> &Acirc;&nbsp;
+     <div id="two" class="ui-body-d ui-content height_fit day_03">
+       &Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;
+      <h1></h1> &Acirc;&nbsp;&Acirc;&nbsp;
+     </div> 
+    </div>
+    <!-- /header --> 
+    <!-- content --> 
+   </div> 
+  </div> 
+  <!-- /Impact page --> 
+  <!-- leaderboard page --> 
+  <div data-role="page" id="leaderboard2"> 
+   <div data-role="panel" id="myPanel"> 
+    <p>B206,Ozone EverGreen</p> 
+    <p>Impact</p> 
+    <p>Leader Board</p> 
+    <p>Discussion Board</p> 
+    <p>Invite Others</p> 
+    <p>Profile</p> 
+   </div> 
+   <!-- header --> 
+   <div data-role="header" class="bj_blue"> 
+    <span class="icon-menu"><a href="#myPanel"></a></span> 
+    <span class="icon-logo"><a href=""></a></span> 
+    <span class="top_text_1">Leader Board</span> 
+    <span class="icon-notification"><a href=""></a></span>
+    <span class="red_tip">1</span> 
+    <div data-role="tabs" id="tabs" class="impact_tab">
+      &Acirc;&nbsp;&Acirc;&nbsp;
+     <div data-role="navbar">
+       &Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;
+      <ul class="ui_bottom_line">
+        &Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;
+       <li><a href="#one" data-ajax="false" class="impact_tab_a">All</a></li> &Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;
+       <li><a href="#two" data-ajax="false">Top 10</a></li> &Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;
+       <li><a href="ajax-content-ignore.html" data-ajax="false">Last 10</a></li> &Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;
+      </ul> &Acirc;&nbsp;&Acirc;&nbsp;
+     </div> &Acirc;&nbsp;&Acirc;&nbsp;
+     <div id="one" class="ui-body-d ui-content height_fit leaderboard_01">
+       &Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;
+      <h1></h1> &Acirc;&nbsp;&Acirc;&nbsp;
+     </div> &Acirc;&nbsp;&Acirc;&nbsp;
+     <div id="two" class="ui-body-d ui-content height_fit leaderboard_02">
+       &Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;
+      <h1></h1> &Acirc;&nbsp;&Acirc;&nbsp;
+     </div> &Acirc;&nbsp;
+     <div id="two" class="ui-body-d ui-content height_fit leaderboard_03">
+       &Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;&Acirc;&nbsp;
+      <h1></h1> &Acirc;&nbsp;&Acirc;&nbsp;
+     </div> 
+    </div>
+    <!-- /header --> 
+    <!-- content --> 
+   </div> 
+  </div> 
+  <!-- /leaderboard page -->   
+ </body>
+</html>
