@@ -66,7 +66,12 @@ $(document).ready(->
         if respData.status is 'SUCCESS'
           global.renderChart()
           window.location.hash = "#home"
-          $(".usagewarning").popup "open"  if respData.popupflag is true
+          setTimeout(->
+            # Assumed server notifying that threshold level of water usage is
+            # crossed.
+            $(".usagewarning").popup("open")  # if respData.popupflag is true
+            return
+          ,1000)
         else
           $('#login').show()
         return

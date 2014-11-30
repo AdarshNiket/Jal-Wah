@@ -66,9 +66,9 @@ $(document).ready(function() {
       if (respData.status === 'SUCCESS') {
         global.renderChart();
         window.location.hash = "#home";
-        if (respData.popupflag === true) {
+        setTimeout(function() {
           $(".usagewarning").popup("open");
-        }
+        }, 1000);
       } else {
         $('#login').show();
       }
