@@ -188,6 +188,21 @@
 	background-position:left top;
 	background-repeat:no-repeat;
 	}
+.leaderboard_01{
+	background-image:url(img/leaderboardall.svg);
+	background-position:left top;
+	background-repeat:no-repeat;
+	}
+.leaderboard_02{
+	background-image:url(img/leaderboardtop10.svg);
+	background-position:left top;
+	background-repeat:no-repeat;
+	}
+.leaderboard_03{
+	background-image:url(img/leaderboardlast10.svg);
+	background-position:left top;
+	background-repeat:no-repeat;
+	}
 .impact_tab .ui-btn.ui-btn-active{
 	background-color:#f3f4f6 !important;
 	border-left-color:#dddddd !important;
