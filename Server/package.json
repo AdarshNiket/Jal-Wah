@@ -23,7 +23,6 @@
 	"dependencies": {
 		"express": "2.5.11",
 		"mongoose": "2.7.0",
-		"jade": "0.28.2",
 		"session-mongoose": "0.2.2"
 	},
 	"keywords": ["framework", "web", "server", "rest"],
